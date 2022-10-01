@@ -1,0 +1,70 @@
+/*TABELL*/
+
+table {
+    border-collapse: collapse;
+    border-bottom: 2px solid #3f4259;
+  }
+  th, td {
+    border: 1px solid #f6f5f4;
+    padding: 8px;
+  }
+  thead > tr {
+    background-color: #3f4259;
+    color: #f6f7fa;
+  }
+  tbody > tr:nth-child(odd) {
+    background-color: #f6f7fa;
+  } 
+  
+  body {
+    background-color: #f5f5f5; 
+    font-family: Georgia, serif; 
+  }
+  #hoved {         
+    margin: 20px;         
+    padding: 20px;	             
+    background-color: white; 	 
+    border: 1px solid #cccccc;
+    margin-left: 525px;
+  }
+  h1 {
+    font-family: Arial, sans-serif; 
+  }
+
+  /*SLUTT TABELL*/
+  html,
+  body {
+      width: 100%;
+      height: 100%;
+  }
+
+  body {
+      background: linear-gradient(-45deg, #ff3c00, #e3ee17, #d52323, #ece917);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+
+      50% {
+          background-position: 100% 50%;
+      }
+
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  div {
+    
+    border: solid 2px #333;
+    text-align: center;
+    width: 24%;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid
+}
+
