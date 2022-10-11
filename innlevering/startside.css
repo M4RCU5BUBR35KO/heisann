@@ -1,0 +1,50 @@
+#fjell {
+    float: left;
+    margin-top: 20px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin-left: 200px;
+    border-radius: 100%;
+    transition: 0.2s;
+}
+
+#kjendiser {
+    float: right;
+    margin-top: 20px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 100%;
+    position: relative;
+    right: 200px;
+    transition: 0.2s;
+}
+
+#fjell:hover {
+    height: 410px;
+    width: 410px;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.30);
+}
+
+#kjendiser:hover {
+    height: 410px;
+    width: 410px;
+    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.30);
+}
+
+.tilbake {
+    border: #333 3px solid;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: x-large;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 10px;
+    top: 10px
+
+}

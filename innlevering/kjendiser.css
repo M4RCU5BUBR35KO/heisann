@@ -1,0 +1,247 @@
+body {
+    background-image: url(http://bgfons.com/uploads/wood/wood%20_texture1584.jpg);
+    background-size: cover;
+}
+
+#ronaldo {
+    float: left;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 110px;
+    margin-top: 150px;
+    border-radius: 100%;
+    transition: 0.2s;
+}
+
+#ronaldo:hover {
+    height: 160px;
+    width: 160px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+}
+
+#ug {
+    float: left;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 110px;
+    margin-top: 150px;
+    border-radius: 100%;
+    transition: 0.2s;
+}
+
+#ug:hover {
+    height: 160px;
+    width: 160px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+
+}
+
+#eminem {
+    float: left;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 110px;
+    margin-top: 150px;
+    border-radius: 100%;
+    transition: 0.2s;
+}
+
+#eminem:hover {
+    height: 160px;
+    width: 160px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+}
+
+#johndaly {
+    float: left;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 110px;
+    margin-top: 150px;
+    border-radius: 100%;
+    transition: 0.2s;
+}
+
+#johndaly:hover {
+    height: 160px;
+    width: 160px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+}
+
+#messi {
+    float: left;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-left: 110px;
+    margin-top: 150px;
+    border-radius: 100%;
+    transition: 0.2s;
+    margin-right: 100px;
+}
+
+#messi:hover {
+    height: 160px;
+    width: 160px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid #333 1px;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    width: 25%;
+    margin-top: 50px;
+    margin-left: 520px
+}
+
+#boxronaldo {
+    margin-top: 700px;
+    border: #333 solid 2px;
+    background-color: beige;
+
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+
+
+}
+
+#bilderonaldo {
+    height: 500px;
+    width: 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+
+#boxug {
+    margin-top: 100px;
+    border: #333 solid 2px;
+    background-color: beige;
+
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+
+
+}
+
+#bildeug {
+    height: 500px;
+    width: 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+#boxeminem {
+    margin-top: 100px;
+    border: #333 solid 2px;
+    background-color: beige;
+
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+
+
+}
+
+#bildeeminem {
+    height: 500px;
+    width: 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+#boxjohndaly {
+    margin-top: 100px;
+    border: #333 solid 2px;
+    background-color: beige;
+
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+
+
+}
+
+#bildejohndaly {
+    height: 500px;
+    width: 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+#boxmessi {
+    margin-top: 100px;
+    border: #333 solid 2px;
+    background-color: beige;
+
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+
+
+}
+
+#bildemessi {
+    height: 500px;
+    width: 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+
+.top {
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+    white-space: nowrap;
+    font-size: large;
+    position: sticky;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+
+
+}
+
+.tilbake {
+    border: #333 3px solid;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: x-large;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 10px;
+    top: 10px;
+
+}
