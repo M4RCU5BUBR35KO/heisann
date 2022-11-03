@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: red;
+            font-weight: 700;
+            font-size: xx-large;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var tall1 = Number(prompt("Gi meg et tall: ")); 
+        var operator = prompt("operasjon (+ - * eller / **)?");
+        var tall2 = Number(prompt("Gi meg et tall til: "));
+       
+        var resultat;
+
+        if(operator == "+"){
+            var resultat= tall1 + tall2;
+        }
+        if(operator == "**"){
+            var resultat= tall1 ** tall2
+        }
+        if(operator == "-"){
+            var resultat= tall1 - tall2;
+        }
+        if(operator == "*"){
+            var resultat= tall1 * tall2;
+        }
+        if(operator == "/"){
+            var resultat= tall1 / tall2;
+        }
+        document.write("<h1>Resultatet blir = <h1>" + resultat);
+    </script>
+</body>
+</html>
