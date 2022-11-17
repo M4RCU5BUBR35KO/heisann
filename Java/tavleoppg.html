@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loddtrekning</title>
+</head>
+
+<body>
+    <h1>Loddtrekning</h1>
+    <input id="inpAntallTall" placeholder="Antall Solgte" type="Number">
+    <input id="inpMittValg" placeholder="Mitt valg er" type="Number">
+    <button id="btnVelgVinner">Klikk på meg for resultat</button>
+    <h1 id="txtResultat"></h1>
+    <script>
+        inpAntallTall = document.getElementById("inpAntallTall");
+        inpMittValg = document.getElementById("inpMittValg");
+        btnVelgVinner = document.getElementById("btnVelgVinner");
+        txtResulat = document.getElementById("txtResultat")
+        
+        var antallTall;
+        var mittValg;
+        var vinnerLodd;
+
+        
+
+        antallTall = Number(inpAntallTall.value);
+
+        btnVelgVinner.onclick = function () {
+            antallTall = Number(inpAntallTall.value);
+            mittValg = Number(inpMittValg.value);
+            vinnerLodd = parseInt((Math.random() * antallTall) + 1)
+        if (mittValg == vinnerLodd) {
+            txtResulat.innerHTML = "DU VANT"
+        }
+        else {
+            txtResulat.innerHTML = "TAPER, DU TAPTE. Vinner loddet var:" + String(vinnerLodd)
+        }
+    }
+
+    </script>
+
+</body>
+
+</html>

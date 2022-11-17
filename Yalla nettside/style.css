@@ -1,0 +1,136 @@
+/*Slide 1*/
+#slide-1 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#slide-1 .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#slide-1 .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#slide-1 .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#slide-1 .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#slide-1 .topnav a.active {
+  background-color: #2b6ccd;
+  color: white;
+}
+
+
+/*End Slide 1*/
+
+/*Slide 2*/
+#slide-2 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#slide-2 .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#slide-2 .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#slide-2 .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#slide-2 .topnav a.active {
+  background-color: #3a7ad9;
+  color: white;
+}
+
+
+/*End Slide 2*/
+
+
+/*Slide 3*/
+#slide-3 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#slide-3 .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#slide-3 .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#slide-3 .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#slide-3 .topnav a.active {
+  background-color: #6295e1;
+  color: white;
+}
+
+/*End Slide 3*/
+
+/*Slide 3*/
+#slide-4 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#slide-4 .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#slide-4 .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#slide-4 .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#slide-4 .topnav a.active {
+  background-color: #8db7f7;
+  color: white;
+}
+
+
+/*End Slide 3*/

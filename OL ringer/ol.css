@@ -1,0 +1,51 @@
+.blaa{
+    border-radius: 50%;
+    border: solid #0085C7 5px;
+    width: 60px;
+    height: 60px;
+z-index: 0;
+}
+
+.gul{
+    border-radius: 50%;
+    border: solid #F4C300 5px;
+    width: 60px;
+    height: 60px;
+    margin-top: 35px;
+    margin-left: 35px;
+z-index: -1;
+}
+.svart{
+    border-radius: 50%;
+    border: solid #000000 5px;
+    width: 60px;
+    height: 60px;
+margin-left: 72px;
+z-index: 0;
+}
+.gronn{
+    border-radius: 50%;
+    border: solid #009F3D 5px;
+    width: 60px;
+    height: 60px;
+margin-top: 35px;
+margin-left: 107px;
+z-index: 1;
+}
+.rod{
+    border-radius: 50%;
+    border: solid #DF0024 5px;
+    width: 60px;
+    height: 60px;
+    margin-left: 144px;
+
+}
+*{
+    position: absolute;
+
+}
+#ol{
+    position: absolute;
+    left: 600px;
+    top: 300px;
+}
