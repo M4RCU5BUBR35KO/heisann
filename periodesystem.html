@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodesystem</title>
+
+    <style>
+        .section1 {
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: repeat(18, 1fr);
+        }
+        .section1 div{
+            padding: 10px;
+            text-align: center;
+        }
+
+        div {
+            background-color: aqua;
+        }
+
+        .usynlig {
+            opacity: 0;
+        }
+
+        .span-16{
+            grid-column: span 16;
+        }
+
+        .span-10{
+            grid-column: span 10;
+            grid-row: span 2;
+        }
+
+        .section2 {
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: repeat(15, 1fr);
+            position: absolute;
+            top: 80%;
+            left: 31%;
+            transform: translate(-10%, -80%);
+        }
+       
+        .section2 div{
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="section1">
+        <div>1 <br> H</div>
+        <div class="usynlig span-16"></div>
+        <div>2 <br> He</div>
+        <div>3 <br>Li</div>
+        <div>4 <br>Be</div>
+        <div class="usynlig span-10"></div>
+        <div>5 <br>B</div>
+        <div>6 <br>C</div>
+        <div>7 <br>N</div>
+        <div>8 <br>O</div>
+        <div>9 <br>F</div>
+        <div>10 <br>Ne</div>
+        <div>11 <br>Na</div>
+        <div>12 <br>Mg</div>
+        <div>13 <br>Al</div>
+        <div>14 <br>Si</div>
+        <div>15 <br>P</div>
+        <div>16 <br>S</div>
+        <div>17 <br>Cl</div>
+        <div>18 <br>Ar</div>
+        <div>19 <br>K</div>
+        <div>20 <br>Ca</div>
+        <div>21 <br>Sc</div>
+        <div>22 <br>Ti</div>
+        <div>23 <br>V</div>
+        <div>24 <br>Cr</div>
+        <div>25 <br>Mn</div>
+        <div>26 <br>Fe</div>
+        <div>27 <br>Co</div>
+        <div>28 <br>Ni</div>
+        <div>29 <br>Cu</div>
+        <div>30 <br>Zn</div>
+        <div>31 <br>Ga</div>
+        <div>32 <br>Ge</div>
+        <div>33 <br>As</div>
+        <div>34 <br>Se</div>
+        <div>35 <br>Br</div>
+        <div>36 <br>Kr</div>
+        <div>37 <br>Rb</div>
+        <div>38 <br>Sr</div>
+        <div>39 <br>Y</div>
+        <div>40 <br>Zr</div>
+        <div>41 <br>Nb</div>
+        <div>42 <br>Mo</div>
+        <div>43 <br>Tc</div>
+        <div>44 <br>Ru</div>
+        <div>45 <br>Rh</div>
+        <div>46 <br>Pd</div>
+        <div>47 <br>Ag</div>
+        <div>48 <br>Cd</div>
+        <div>49 <br>In</div>
+        <div>50 <br>Sn</div>
+        <div>51 <br>Sb</div>
+        <div>52 <br>Te</div>
+        <div>53 <br>Te</div>
+        <div>54 <br>Xe</div>
+        <div>55 <br>Cs</div>
+        <div>56 <br>Ba</div>
+        <div>57 - <br>71</div>
+        <div>72 <br>Hf</div>
+        <div>73 <br>Ta</div>
+        <div>74 <br>W</div>
+        <div>75 <br>Re</div>
+        <div>76 <br>Os</div>
+        <div>77 <br>Ir</div>
+        <div>78 <br>Pt</div>
+        <div>79 <br>Au</div>
+        <div>80 <br>Hg</div>
+        <div>81 <br>Tl</div>
+        <div>82 <br>Pb</div>
+        <div>83 <br>Bi</div>
+        <div>84 <br>Po</div>
+        <div>85 <br>At</div>
+        <div>86 <br>Rn</div>
+        <div>87 <br>Fr</div>
+        <div>88 <br>Ra</div>
+        <div>89 - <br>103</div>
+        <div>104 <br>Rf</div>
+        <div>105 <br>Db</div>
+        <div>106 <br>Sg</div>
+        <div>107 <br>Bh</div>
+        <div>108 <br>Hs</div>
+        <div>109 <br>Mt</div>
+        <div>110 <br>Ds</div>
+        <div>111 <br>Rg</div>
+        <div>112 <br>Cn</div>
+        <div>113 <br>Nh</div>
+        <div>114 <br>Fl</div>
+        <div>115 <br>Mc</div>
+        <div>116 <br>Lv</div>
+        <div>117 <br>Ts</div>
+        <div>118 <br>Og</div>
+        </section>
+
+        <section class="section2">
+        <div>57 <br>La</div>
+        <div>58 <br>Ce</div>
+        <div>59 <br>Pr</div>
+        <div>60 <br>Nd</div>
+        <div>61 <br>Pm</div>
+        <div>62 <br>Sm</div>
+        <div>63 <br>Eu</div>
+        <div>64 <br>Gd</div>
+        <div>65 <br>Tb</div>
+        <div>66 <br>Dy</div>
+        <div>67 <br>Ho</div>
+        <div>68 <br>Er</div>
+        <div>69 <br>Tm</div>
+        <div>70 <br>Yb</div>
+        <div>71 <br>Lu</div>
+        <div>89 <br>Ac</div>
+        <div>90 <br>Th</div>
+        <div>91 <br>Pa</div>
+        <div>92 <br>U</div>
+        <div>93 <br>Np</div>
+        <div>94 <br>Pu</div>
+        <div>95 <br>Am</div>
+        <div>96 <br>Cm</div>
+        <div>97 <br>Bk</div>
+        <div>98 <br>Cf</div>
+        <div>99 <br>Es</div>
+        <div>100 <br>Fm</div>
+        <div>101 <br>Md</div>
+        <div>102 <br>No</div>
+        <div>103 <br>Lr</div>
+
+    </section>
+</body>
+
+</html>
