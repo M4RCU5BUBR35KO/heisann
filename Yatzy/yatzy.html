@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatzy</title>
+    <link rel="icon" type="image/x-icon" href="./Terning bilder/icons8-yahtzee-64 (1).png">
+    <link rel="stylesheet" href="yatzy.css">
+</head>
+
+<body>
+    
+    <p id="spillernavn" onclick="hvorSpiller()">Hvem spiller?</p>
+
+    <section>
+        <div style="font-weight:700;">Spillere:</div>
+        <div class="spillere"></div>
+        <div class="spillere"></div>
+        <div class="spillere"></div>
+        <div class="spillere"></div>
+        <div>Enere</div>
+        <div class="rad1" onclick="enTilSex(1, 1)" id="spiller1enere"></div>
+        <div class="rad1" onclick="enTilSex(1, 2)"></div>
+        <div class="rad1" onclick="enTilSex(1, 3)"></div>
+        <div class="rad1" onclick="enTilSex(1, 4)"></div>
+        <div>Toere</div>
+        <div class="rad2" onclick="enTilSex(2, 1)"></div>
+        <div class="rad2" onclick="enTilSex(2, 2)"></div>
+        <div class="rad2" onclick="enTilSex(2, 3)"></div>
+        <div class="rad2" onclick="enTilSex(2, 4)"></div>
+        <div>Treere</div>
+        <div class="rad3" onclick="enTilSex(3, 1)"></div>
+        <div class="rad3" onclick="enTilSex(3, 2)"></div>
+        <div class="rad3" onclick="enTilSex(3, 3)"></div>
+        <div class="rad3" onclick="enTilSex(3, 4)"></div>
+        <div>Firere</div>
+        <div class="rad4" onclick="enTilSex(4, 1)"></div>
+        <div class="rad4" onclick="enTilSex(4, 2)"></div>
+        <div class="rad4" onclick="enTilSex(4, 3)"></div>
+        <div class="rad4" onclick="enTilSex(4, 4)"></div>
+        <div>Femmere</div>
+        <div class="rad5" onclick="enTilSex(5, 1)"></div>
+        <div class="rad5" onclick="enTilSex(5, 2)"></div>
+        <div class="rad5" onclick="enTilSex(5, 3)"></div>
+        <div class="rad5" onclick="enTilSex(5, 4)"></div>
+        <div>Seksere</div>
+        <div class="rad6" onclick="enTilSex(6, 1)"></div>
+        <div class="rad6" onclick="enTilSex(6, 2)"></div>
+        <div class="rad6" onclick="enTilSex(6, 3)"></div>
+        <div class="rad6" onclick="enTilSex(6, 4)"></div>
+        <div style="font-weight: 700;">Sum</div>
+        <div class="rad7" onclick="sumForste(7,1)"></div>
+        <div class="rad7" onclick="sumForste(7,2)"></div>
+        <div class="rad7" onclick="sumForste(7,3)"></div>
+        <div class="rad7" onclick="sumForste(7,4)"></div>
+        <div style="font-weight:700;">Bonus</div>
+        <div style="font-weight:700;" class="rad8"></div>
+        <div style="font-weight:700;" class="rad8"></div>
+        <div style="font-weight:700;" class="rad8"></div>
+        <div style="font-weight:700;" class="rad8"></div>
+        <div>1 par</div>
+        <div class="rad9" onclick="par1(9,1)"></div>
+        <div class="rad9" onclick="par1(9,2)"></div>
+        <div class="rad9" onclick="par1(9,3)"></div>
+        <div class="rad9" onclick="par1(9,4)"></div>
+        <div>2 par</div>
+        <div class="rad10" onclick="par2(10,1)"></div>
+        <div class="rad10" onclick="par2(10,2)"></div>
+        <div class="rad10" onclick="par2(10,3)"></div>
+        <div class="rad10" onclick="par2(10,4)"></div>
+        <div>3 like</div>
+        <div class="rad11" onclick="antallLike(11,1,3)"></div>
+        <div class="rad11" onclick="antallLike(11,2,3)"></div>
+        <div class="rad11" onclick="antallLike(11,3,3)"></div>
+        <div class="rad11" onclick="antallLike(11,4,3)"></div>
+        <div>4 like</div>
+        <div class="rad12" onclick="antallLike(12,1,4)"></div>
+        <div class="rad12" onclick="antallLike(12,2,4)"></div>
+        <div class="rad12" onclick="antallLike(12,3,4)"></div>
+        <div class="rad12" onclick="antallLike(12,4,4)"></div>
+        <div>Liten Straight</div>
+        <div class="rad13" onclick="litenStorStraight(13,1)"></div>
+        <div class="rad13" onclick="litenStorStraight(13,2)"></div>
+        <div class="rad13" onclick="litenStorStraight(13,3)"></div>
+        <div class="rad13" onclick="litenStorStraight(13,4)"></div>
+        <div>Stor Straight</div>
+        <div class="rad14" onclick="litenStorStraight(14,1)"></div>
+        <div class="rad14" onclick="litenStorStraight(14,2)"></div>
+        <div class="rad14" onclick="litenStorStraight(14,3)"></div>
+        <div class="rad14" onclick="litenStorStraight(14,4)"></div>
+        <div>Hus</div>
+        <div class="rad15" onclick="hus(15,1)"></div>
+        <div class="rad15" onclick="hus(15,2)"></div>
+        <div class="rad15" onclick="hus(15,3)"></div>
+        <div class="rad15" onclick="hus(15,4)"></div>
+        <div>Sjanse</div>
+        <div class="rad16" onclick="sjanse(16,1)"></div>
+        <div class="rad16" onclick="sjanse(16,2)"></div>
+        <div class="rad16" onclick="sjanse(16,3)"></div>
+        <div class="rad16" onclick="sjanse(16,4)"></div>
+        <div>Yatzy</div>
+        <div class="rad17" onclick="antallLike(17,1,5)"></div>
+        <div class="rad17" onclick="antallLike(17,2,5)"></div>
+        <div class="rad17" onclick="antallLike(17,3,5)"></div>
+        <div class="rad17" onclick="antallLike(17,4,5)"></div>
+        <div style="font-weight:700;">Totalsum</div>
+        <div class="rad18" onclick="totalSum(18,1)"></div>
+        <div class="rad18" onclick="totalSum(18,2)"></div>
+        <div class="rad18" onclick="totalSum(18,3)"></div>
+        <div class="rad18" onclick="totalSum(18,4)"></div>
+    </section>
+    <br>
+    <br>
+
+    <p id="kastTerning" onclick="kastTerningene()">Kast Terningene</p>
+
+    <div class="bilder">
+        <img width="70px" id="imgBilde1" onclick="lagreTerning1()">
+        <img width="70px" id="imgBilde2" onclick="lagreTerning2()">
+        <img width="70px" id="imgBilde3" onclick="lagreTerning3()">
+        <img width="70px" id="imgBilde4" onclick="lagreTerning4()">
+        <img width="70px" id="imgBilde5" onclick="lagreTerning5()">
+    </div>
+
+    <div id="terningene">
+        <p id="terningNummer1"></p>
+        <p id="terningNummer2"></p>
+        <p id="terningNummer3"></p>
+        <p id="terningNummer4"></p>
+        <p id="terningNummer5"></p>
+    </div>
+
+    <script src="yatzy.js"></script>
+</body>
+
+</html>
