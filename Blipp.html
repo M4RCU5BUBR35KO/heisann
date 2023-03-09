@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        head,
+        body {
+            background-color: brown;
+            margin-left: 600px;
+        }
+
+        div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
+    <input id="farge" type="color">
+    <audio src="Blipp.wav"></audio>
+    <p id="teller"></p>
+    <div class="stoppeklokke">
+        <p><span id="sekunder">00</span>:<span id="tiere">00</span></p>
+        <button id="button-start">Start</button>
+        <button id="button-stop">Stop</button>
+        <button id="button-reset">Reset</button>
+    </div>
+    <script>
+        var ny = true
+        var tellerP = document.getElementById("teller")
+        var teller = 0
+        var lyd = new Audio("Blipp.wav")
+        window.onload = function () {
+
+            var sekunder = 00;
+            var tiere = 00;
+            var leggTilTiere = document.getElementById("tiere");
+            var leggTilSekunder = document.getElementById("sekunder");
+            var buttonStart = document.getElementById('button-start');
+            var buttonStop = document.getElementById('button-stop');
+            var buttonReset = document.getElementById('button-reset');
+            var Interval;
+
+            buttonStart.onclick = function (evt) {
+                clearInterval(Interval);
+                Interval = setInterval(startTimer, 10);
+                evt.stopPropagation();
+            }
+
+            buttonStop.onclick = function (evt) {
+                clearInterval(Interval);
+                evt.stopPropagation();
+            }
+
+
+            buttonReset.onclick = function (evt) {
+                clearInterval(Interval);
+                tiere = "00";
+                sekunder = "00";
+                leggTilTiere.innerHTML = tiere;
+                leggTilSekunder.innerHTML = sekunder;
+                evt.stopPropagation();
+            }
+
+
+
+            function startTimer() {
+                tiere++;
+
+                if (tiere <= 9) {
+                    leggTilTiere.innerHTML = "0" + tiere;
+                }
+
+                if (tiere > 9) {
+                    leggTilTiere.innerHTML = tiere;
+
+                }
+
+                if (tiere > 99) {
+                    console.log("sekunder");
+                    sekunder++;
+                    leggTilSekunder.innerHTML = "0" + sekunder;
+                    tiere = 0;
+                    leggTilTiere.innerHTML = "0" + 0;
+                }
+
+                if (sekunder > 9) {
+                    leggTilSekunder.innerHTML = sekunder;
+                }
+
+            }
+
+
+        }
+        var fjern = function (evt) {
+            evt.stopPropagation();
+
+            if (!ny) {
+                var minAnim = evt.target.animate([{ transform: "scale(1)" }, { transform: "scale(2)" }], 100);
+                minAnim.onfinish = function () {
+                    document.body.removeChild(evt.target);
+                    lyd.play();
+                    teller++
+                    tellerP.innerHTML = teller;
+                }
+
+            }
+            ny = false;
+        }
+
+
+        var farge = document.getElementById("farge")
+        window.onclick = function (evt) {
+            ny = true;
+            var mittElement = document.createElement("div");
+            mittElement.style.top = evt.clientY - 25 + "px";
+            mittElement.style.left = evt.clientX - 25 + "px";
+            mittElement.style.backgroundColor = farge.value
+            mittElement.onmouseenter = fjern;
+            document.body.appendChild(mittElement);
+        }
+        farge.onclick = function (evt) {
+            evt.stopPropagation();
+        }
+
+    </script>
+
+</body>
+
+</html>
