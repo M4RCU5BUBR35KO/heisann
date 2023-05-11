@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* funksjonen tar inn fem parametere og sjekker om de er like eller ikke. 
+        Om de er like så summerer den tallene og om den ikke er like returnerer den false */
+        /*
+        function summerTall(forste, andre, tredje, fire, femte) {
+            if (forste == andre) {
+                return forste + andre;
+            }
+            else if (andre == tredje) {
+                return andre + tredje;
+            }
+            else if (forste == tredje) {
+                return forste + tredje;
+            }
+            else if (forste == fire) {
+                return forste + fire;
+            }
+            else if (forste == femte) {
+                return forste + femte;
+            }
+            else if (andre == fire) {
+                return andre + fire;
+            }
+            else if (andre == femte) {
+                return andre + femte;
+            }
+            else if (tredje == fire) {
+                return tredje + fire;
+            }
+            else if (tredje == femte) {
+                return tredje + femte;
+            }
+            else if (fire == femte) {
+                return fire + femte;
+            }
+            else {
+                return false;
+            }
+        }
+        alert(summerTall(6, 0, 1, 6, 2));
+*/
+
+        function findLargestPair(numbers) {
+  let largest = 0;
+  let secondLargest = 0;
+  for (const number of numbers) {
+    if (number > largest) {
+      secondLargest = largest;
+      largest = number;
+    } else if (number > secondLargest) {
+      secondLargest = number;
+    }
+  }
+  if (largest === secondLargest) {
+    return false;
+  }
+  return largest + secondLargest;
+}
+
+console.log(findLargestPair([1, 2, 1, 4])); // 7
+console.log(findLargestPair([1, 1, 2, 4])); // 6
+console.log(findLargestPair([1, 1, 1, 1])); // false
+    </script>
+
+</body>
+
+</html>

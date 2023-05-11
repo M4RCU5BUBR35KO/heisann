@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <h1 id="sporsmaal">Her er spørsmålet</h1>
+    <input id="inpSvar" type="text">
+    <h4 id="alternativ1">Alt1</h5>
+    <h4 id="alternativ2">Alt2</h5>
+    <h4 id="alternativ3">Alt3</h5>
+    <input id="inpNyttSpmSvar" type="text" hidden="true">
+    <button id="btnAdmin">Bli admin</button>
+    <button id="btnOK">Klikk når du er klar</button>
+    <button id="btnForrige">Forrige</button>
+    <button id="btnNeste">Neste</button>
+    <br><br>
+    <img id="imgBilde" src="" width=200px alt="Fant ikke bildet">
+    <script>
+        var sporsmaal = document.getElementById("sporsmaal");
+        var alternativ1 = document.getElementById("alternativ1");
+        var alternativ2 = document.getElementById("alternativ2");
+        var alternativ3 = document.getElementById("alternativ3");
+        var lydRiktigSvar = document.getElementById("lydRiktigSvar");
+        var inpSvar = document.getElementById("inpSvar");
+        var inpNyttSpmSvar = document.getElementById("inpNyttSpmSvar");
+        var btnOK = document.getElementById("btnOK");
+        var btnNeste = document.getElementById("btnNeste");
+        var btnForrige = document.getElementById("btnForrige");
+        var imgBilde = document.getElementById("imgBilde");
+        var btnAdmin = document.getElementById("btnAdmin");
+        var spmNr = 0;
+        btnForrige.disabled = true;
+
+
+
+
+
+        var spmOgSvar = [
+            { q: "Hva heter norges høyeste fjell?", a1: "Alt1: Galdhøpiggen", a2: "Alt2: Glittertind", a3: "Store Skagastølstind", riktig: "1", bilde: "https://upload.wikimedia.org/wikipedia/commons/9/98/GaldhøpiggenFromFannaråki.jpg" },
+            { q: "Hvor høy er Mount Everest?", a1: "2848 m", a2: "4848 m", a3: "8848 m", riktig: "3", bilde: "https://cdn.britannica.com/17/83817-050-67C814CD/Mount-Everest.jpg" },
+            { q: "Hva er fornavnet statsministeren i Norge?", a1: "Jonas", a2: "Ronny", a3: "Pelle", riktig: "1", bilde: "https://www.highnorthnews.com/sites/default/files/2020-11/JonasHighNorthNews.jpg" }
+        ]
+        function settOppSkjermbilde() {
+            sporsmaal.innerHTML = spmOgSvar[spmNr].q;
+            imgBilde.src = spmOgSvar[spmNr].bilde;
+            if(spmOgSvar[spmNr].bilde == "") {
+                imgBilde.alt = "";
+            }
+            alternativ1.innerHTML = spmOgSvar[spmNr].a1;
+            alternativ2.innerHTML = spmOgSvar[spmNr].a2;
+            alternativ3.innerHTML = spmOgSvar[spmNr].a3;
+            btnForrige.hidden=false;
+            btnNeste.hidden=false;
+            alternativ1.innerHTML = spmOgSvar[spmNr].a1;
+            alternativ2.innerHTML = spmOgSvar[spmNr].a2;
+            alternativ3.innerHTML = spmOgSvar[spmNr].a3;
+            inpSvar.value = "";
+            inpNyttSpmSvar.value = "";
+        }
+
+ 
+      
+var riktigSvarLyd = new Audio ("Woho.mp3")
+var feilSvarLyd = new Audio ("Feil.mp3")
+        //initiering av det første spørsmål:
+        settOppSkjermbilde();
+ 
+        function sjekkSvar() {
+           // if (inpSvar.value.toLowerCase() == spmOgSvar[spmNr].a.toLowerCase()) { 
+            if (inpSvar.value == spmOgSvar[spmNr].riktig.toLowerCase()) { 
+                riktigSvarLyd.play()
+                alert("Supert, du er et geni!")
+            }
+            else {
+                feilSvarLyd.play()
+                alert("Du er ikke et geni ennå")
+            }
+        }
+        btnOK.addEventListener("click", sjekkSvar);
+        
+        function nesteSpm() {
+            btnForrige.disabled = false;
+            if (spmNr < spmOgSvar.length - 1) {
+                spmNr = spmNr + 1  // spmNr++;
+                settOppSkjermbilde();
+            }
+            if (spmNr == spmOgSvar.length - 1) {
+                btnNeste.disabled = true;
+            }
+            reset()
+        }
+        btnNeste.addEventListener("click", nesteSpm);
+ 
+        function forrigeSpm() {
+            btnNeste.disabled = false;
+            if (spmNr > 0) {
+                spmNr = spmNr - 1  // spmNr--;
+                settOppSkjermbilde();
+            }
+            if (spmNr == 0) {
+                btnForrige.disabled = true;
+            }
+            reset()
+        }
+        btnForrige.addEventListener("click", forrigeSpm);
+        
+        function reset(){
+            inpSvar.value = "";
+        }
+
+        function adminFunksjoner() {
+            btnAdmin.innerHTML = "Tilbake til vanlig svarmodus";
+            btnAdmin.removeEventListener("click", adminFunksjoner);
+            btnAdmin.addEventListener("click", normalFunksjoner);
+            inpNyttSpmSvar.hidden=false;
+            sporsmaal.innerHTML = "Skriv nytt spørsmål i første inputfelt, riktig svar i andre";
+            inpSvar.placeholder = "Spørsmål";
+            inpNyttSpmSvar.placeholder = "Svar";
+            alternativ1.hidden = true;
+            alternativ2.hidden = true;
+            alternativ3.hidden = true;
+            imgBilde.src="";
+            imgBilde.alt="";
+            btnForrige.hidden=true;
+            btnNeste.hidden=true;
+            btnOK.removeEventListener("click", sjekkSvar);
+            btnOK.addEventListener("click", leggInnNyttSpm);
+            btnOK.innerHTML = "Legg inn spørsmålet";
+        }
+
+        function normalFunksjoner() {
+            inpSvar.placeholder = "Skriv Svaret";
+            inpNyttSpmSvar.hidden = true;
+            btnAdmin.innerHTML = "Bli admin";
+            btnAdmin.removeEventListener("click", normalFunksjoner);
+            btnAdmin.addEventListener("click", adminFunksjoner);
+            btnOK.innerHTML = "Klikk når du er klar";
+            btnOK.removeEventListener("click", leggInnNyttSpm);
+            btnOK.addEventListener("click", sjekkSvar);
+            settOppSkjermbilde();
+            btnAdmin.hidden=true;
+        }
+
+        function leggInnNyttSpm() {
+            //gjør alt som trengs for å legge til et nytt spm
+            var nyttSpm = {q: inpSvar.value, riktig: inpNyttSpmSvar.value, a1:"", a2:"",a3:"" ,bilde: "" };
+            spmOgSvar.push(nyttSpm);
+        }
+        btnAdmin.addEventListener("click", adminFunksjoner);
+
+        function knappeTrykk(evt) {
+            var tallkode = evt.keyCode;
+            if(tallkode == 66){  // du har trykket "b"
+                btnAdmin.hidden=false;
+            }
+        }
+        document.addEventListener("keydown",knappeTrykk);
+        
+    </script>
+</body>
+ 
+</html>
+

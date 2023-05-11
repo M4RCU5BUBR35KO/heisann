@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="klasseSkjema">
+        <input id="antallEleverInp"type="range" value="1" min="1" max="30" oninput="this.nextElementSibling.value = this.value">
+        <output>1</output>
+        <input id="hviteSkoInp" type="text" required placeholder="Antall hvite sko?">
+        <input id="antall18aar" type="text" required placeholder="Antall 18 åringer?">
+        <input id="antallBorte" type="text" required placeholder="Antall borte/syke?">
+
+        <button id="klasseSubmit" type="submit">Bekreft</button>
+    </form>
+
+    <script>
+        let klasseSkjema = document.querySelector("#klasseSkjema");
+        let klasseSubmit = document.querySelector("#klasseSubmit");
+
+        klasseSkjema.onsubmit = function(evt) {
+            evt.preventDefault()
+        }
+    </script>
+</body>
+</html>

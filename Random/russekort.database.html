@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="russekort.css">
+    <title>Russekort</title>
+</head>
+
+<!--Russekort generator der du kan legge inn din egen info og eventuelt bilde.-->
+
+<body>
+
+    <h3>Velg en farge</h3>
+    <label for="farge">Blå:</label>
+    <input onclick="byttTilBlaa()" type="radio" name="farge" id="rodINP">
+
+    <label for="farge">Rød:</label>
+    <input onclick="byttTilRod()" type="radio" name="farge" id="blaaINP">
+    <br>
+    <br>
+
+    <input type="file" id="inpFilNavn" placeholder="Velg/Ta bilde">
+
+    <br>
+    <br>
+    <select name="Velg mal" id="velgmal">
+    </select>
+    <br>
+    <br>
+
+
+
+    <h2>Start med å velge farge på kortet</h2>
+    <h2>(dette kan du endre senere)</h2>
+
+    <h3>Velg bilde via velg fil knappen</h3>
+    <h3>Plasser musepekeren din over den grønne boksen og få bildet til syne</h3>
+    <br>
+    <h4>Legg til infoen din rett på kortet!</h4>
+
+
+    <div id="malRod">
+        <h3 contenteditable="true" id="skolePaaKort">Skole:</h3>
+        <h4 contenteditable="true" id="navnPaaKort">NAVN:</h4>
+        <p contenteditable="true" id="adressePaaKort">Adr:</p>
+        <p contenteditable="true" id="tlfPaaKort">Tlf:</p>
+        <p contenteditable="true" id="sitat1Kort">Stilling</p>
+        <p contenteditable="true" id="sitat2Kort">SITAT 2</p>
+        <p contenteditable="true" id="sitat3Kort">SITAT 3</p>
+        <div id="velgKjonn">
+            <label for="kjonn">Velg kjønn:</label>
+            <select id="kjonn" name="kjonn">
+                <option value="mann">Mann</option>
+                <option value="kvinne">Kvinne</option>
+                <option value="intetkjønn">Intetkjønn</option>
+                <option value="sushi">Sushi</option>
+                <option value="de/dem">de/dem</option>
+                <option value="annet">Annet</option>
+            </select>
+            <div id="forerkort">
+                <label>Førerkort?</label>
+                Nei<input type="checkbox">
+                Ja<input type="checkbox">
+            </div>
+        </div>
+        <div id="svartBakgrunn"></div>
+        <img src="" id="bildePaaKort1"></img>
+        <img src="rodruss.tittel.png" id="russLogo">
+    </div>
+
+    <div id="malBlaa">
+        <h3 contenteditable="true" id="skolePaaKort2">Skole:</h3>
+        <h4 contenteditable="true" id="navnPaaKort2">NAVN:</h4>
+        <p contenteditable="true" id="adressePaaKort2">Adr:</p>
+        <p contenteditable="true" id="tlfPaaKort2">Tlf:</p>
+        <p contenteditable="true" id="sitat1Kort2">Stilling:</p>
+        <p contenteditable="true" id="sitat2Kort2">SITAT 2</p>
+        <p contenteditable="true" id="sitat3Kort2">SITAT 3</p>
+        <div id="velgKjonn">
+            <label for="kjonn">Velg kjønn:</label>
+            <select id="kjonn" name="kjonn">
+                <option value="mann">Mann</option>
+                <option value="kvinne">Kvinne</option>
+                <option value="intetkjønn">Intetkjønn</option>
+                <option value="sushi">Sushi</option>
+                <option value="de/dem">de/dem</option>
+                <option value="annet">Annet</option>
+            </select>
+            <div id="forerkort">
+                <label>Førerkort?</label>
+                Nei<input type="checkbox">
+                Ja<input type="checkbox">
+            </div>
+        </div>
+        <div id="svartBakgrunn"></div>
+        <img src="" id="bildePaaKort2"></img>
+        <img src="blaaruss.tittel.png" id="russLogo">
+    </div>
+
+
+    <script src="database.js"></script>
+    <script>
+
+
+
+        // henter alle id'ene fra html koden
+        var skolePaaKort = document.getElementById("skolePaaKort")
+        var navnPaaKort = document.getElementById("navnPaaKort")
+        var adressePaaKort = document.getElementById("adressePaaKort")
+        var tlfPaaKort = document.getElementById("tlfPaaKort")
+        var rodINP = document.getElementById("rodINP")
+        var blaaINP = document.getElementById("blaaINP")
+        var bildePaaKort1 = document.getElementById("bildePaaKort1")
+        var bildePaaKort2 = document.getElementById("bildePaaKort2")
+        var inpFilNavn = document.getElementById("inpFilNavn")
+        var russLogo = document.getElementById("russLogo")
+        var malRod = document.getElementById("malRod")
+        var malBlaa = document.getElementById("malBlaa")
+        var skolePaaKort = document.getElementById("skolePaaKort")
+        var navnPaaKort = document.getElementById("navnPaaKort")
+        var adressePaaKort = document.getElementById("adressePaaKort")
+        var tlfPaaKort = document.getElementById("tlfPaaKort")
+        var velgmal = document.getElementById("velgmal")
+        var skolePaaKort2 = document.getElementById("skolePaaKort2")
+        var navnPaaKort2 = document.getElementById("navnPaaKort2")
+        var adressePaaKort2 = document.getElementById("adressePaaKort2")
+        var tlfPaaKort2 = document.getElementById("tlfPaaKort2")
+        var sitat1Kort = document.getElementById("sitat1Kort")
+        var sitat2Kort = document.getElementById("sitat2Kort")
+        var sitat3Kort = document.getElementById("sitat3Kort")
+        var sitat1Kort2 = document.getElementById("sitat1Kort2")
+        var sitat2Kort2 = document.getElementById("sitat2Kort2")
+        var sitat3Kort2 = document.getElementById("sitat3Kort2")
+        
+
+
+        // begge malene til russekortet skal være hidden fra start
+        malBlaa.hidden = true
+        malRod.hidden = true
+
+        //funksjon som gir bruker mulighet til å velge en fil som en kan plassere i den grønne boksen
+        function velgFil() {
+            var aktueltFilNavn = URL.createObjectURL(inpFilNavn.files[0]); 
+            bildePaaKort1.src = aktueltFilNavn
+            bildePaaKort2.src = aktueltFilNavn
+        }
+        bildePaaKort1, bildePaaKort2.addEventListener("mouseout", velgFil) //hovre over den grønne boksen for å plassere bildet.
+
+        //bytter fra rød til blaa eller evt starter med blå mal
+        function byttTilBlaa() {
+            russLogo.src = "blaaruss.tittel.png"
+            malBlaa.hidden = false
+            malRod.hidden = true
+        }
+
+        //bytter fra blaa til rød eller evt starter med rød mal
+        function byttTilRod() {
+            russLogo.src = "rodruss.tittel.png"
+            malRod.hidden = false
+            malBlaa.hidden = true
+        }
+
+
+
+        for (var element in maler.kortArray) {
+            velgmal.innerHTML += "<option>" + maler.kortArray[element].navn + "</option>"
+        }
+
+        velgmal.onchange = function () {
+            skolePaaKort.innerHTML = maler.kortArray[velgmal.selectedIndex].skole;
+            navnPaaKort.innerHTML = maler.kortArray[velgmal.selectedIndex].navn;
+            adressePaaKort.innerHTML = maler.kortArray[velgmal.selectedIndex].adresse;
+            tlfPaaKort.innerHTML = maler.kortArray[velgmal.selectedIndex].tlf;
+            sitat1Kort.innerHTML = maler.kortArray[velgmal.selectedIndex].sitat1;
+            sitat2Kort.innerHTML = maler.kortArray[velgmal.selectedIndex].sitat2;
+            sitat3Kort.innerHTML = maler.kortArray[velgmal.selectedIndex].sitat3;
+            skolePaaKort2.innerHTML = maler.kortArray[velgmal.selectedIndex].skole;
+            navnPaaKort2.innerHTML = maler.kortArray[velgmal.selectedIndex].navn;
+            adressePaaKort2.innerHTML = maler.kortArray[velgmal.selectedIndex].adresse;
+            tlfPaaKort2.innerHTML = maler.kortArray[velgmal.selectedIndex].tlf;
+            sitat1Kort2.innerHTML = maler.kortArray[velgmal.selectedIndex].sitat1;
+            sitat2Kort2.innerHTML = maler.kortArray[velgmal.selectedIndex].sitat2;
+            sitat3Kort2.innerHTML = maler.kortArray[velgmal.selectedIndex].sitat3;
+
+        }
+    </script>
+</body>
+
+</html>

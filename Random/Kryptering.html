@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function krypter(ord, shift) {
+            var resultat = "";
+            for (var i = 0; i < ord.length; i++) {
+                var charCode = ord.charCodeAt(i);
+                if (charCode >= 65 && charCode <= 90) {
+                    resultat += String.fromCharCode((charCode - 65 + shift) % 26 + 65);
+                } else if (charCode >= 97 && charCode <= 122) {    
+                    resultat += String.fromCharCode((charCode - 97 + shift) % 26 + 97);
+                } else {                   
+                    resultat += ord.charAt(i);
+                }
+            }
+            return resultat;
+        }
+        var ord = "helge";
+        var shift = 11;
+        var kryptert = krypter(ord, shift);
+        console.log(kryptert);
+
+    </script>
+</body>
+
+</html>

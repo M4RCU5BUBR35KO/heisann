@@ -1,0 +1,122 @@
+#malRod {
+    border: solid 2px;
+    position: absolute;
+    left: 600px;
+    top: 200px;
+    width: 42vw;
+    height: 48vh;
+    background: hsla(0, 51%, 92%, 1);
+    background: radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(0, 85%, 56%, 1) 36%);
+    background: -moz-radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(0, 85%, 56%, 1) 36%);
+    background: -webkit-radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(0, 85%, 56%, 1) 36%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#f5e0e0", endColorstr="#ee3232", GradientType=1);
+}
+
+#malBlaa {
+    border: solid 2px;
+    position: absolute;
+    left: 600px;
+    top: 200px;
+    width: 42vw;
+    height: 48vh;
+    background: hsla(0, 51%, 92%, 1);
+    background: radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(221, 69%, 41%, 1) 30%);
+    background: -moz-radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(221, 69%, 41%, 1) 30%);
+    background: -webkit-radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(221, 69%, 41%, 1) 30%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#f5e0e0", endColorstr="#204DB0", GradientType=1);
+}
+
+#russLogo {
+    height: 17.5vh;
+    width: 45vh;
+    margin-left: 45%;
+
+}
+
+#skolePaaKort, #skolePaaKort2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 1%;
+}
+
+#navnPaaKort, #navnPaaKort2 {
+    position: absolute;
+    left: 60%;
+    top: 45%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+#svartBakgrunn {
+    position: absolute;
+    top: 22%;
+    left: 11%;
+    background-color: black;
+    width: 200px;
+    height: 240px;
+    transform: rotate(-15deg);
+}
+
+#bildePaaKort1 {
+    position: absolute;
+    border: solid 5px;
+    top: 17%;
+    left: 7%;
+    background-color: limegreen;
+    width: 200px;
+    height: 240px;
+    transform: rotate(-15deg);
+}
+
+#bildePaaKort2 {
+    position: absolute;
+    border: solid 5px;
+    top: 17%;
+    left: 7%;
+    background-color: limegreen;
+    width: 200px;
+    height: 240px;
+    transform: rotate(-15deg);
+}
+
+#adressePaaKort, #adressePaaKort2  {
+    position: absolute;
+    left: 60%;
+    top: 55%;
+}
+
+#tlfPaaKort,#tlfPaaKort2 {
+    position: absolute;
+    left: 60%;
+    top: 60%;
+}
+
+#sitat1Kort, #sitat1Kort2 {
+    position: absolute;
+    left: 60%;
+    top: 65%;
+}
+
+#sitat2Kort, #sitat2Kort2 {
+    position: absolute;
+    left: 60%;
+    top: 70%;
+}
+
+#sitat3Kort, #sitat3Kort2 {
+    position: absolute;
+    left: 60%;
+    top: 75%;
+}
+
+#velgKjonn {
+    position: absolute;
+    left: 60%;
+    top: 85%;
+}
+
+#forerkort {
+    position: absolute;
+    left: 0%;
+    top: 95%;
+}
